@@ -17,7 +17,7 @@ Then build and run the docker image accordingly :
 docker build -t syncserver .
 docker run -it -p 8080:8080 syncserver
 ```
-> ![NOTE]
+> [!NOTE]
 > if you dont want server logging, run detached docker image with `-d` instead of `-it`
 
 server should be up with a 
