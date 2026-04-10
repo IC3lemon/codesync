@@ -36,7 +36,7 @@ function App() {
 
   useEffect(() => {
     const connectWs = () => {
-      const socket = new WebSocket('ws://<SERVERIP>:8080');
+      const socket = new WebSocket('ws://127.0.0.1:8080');
       ws.current = socket;
 
       socket.onopen = () => {
