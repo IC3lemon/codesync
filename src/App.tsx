@@ -36,7 +36,9 @@ function App() {
 
   useEffect(() => {
     const connectWs = () => {
-      const socket = new WebSocket('ws://127.0.0.1:8080');
+      // Look for the URL inside Vite's environment config, fallback to localhost if it misses
+      const wsUrl = import.meta.env.VITE_WEBSOCKET_URL || 'ws://127.0.0.1:8080';
+      const socket = new WebSocket(wsUrl);
       ws.current = socket;
 
       socket.onopen = () => {
